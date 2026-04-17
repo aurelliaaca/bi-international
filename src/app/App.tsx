@@ -131,11 +131,11 @@ export default function App() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     // Add the Event data since it's not a standard input field
     formData.append("Event", selectedEvent);
 
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyKnHdiVDXVGVox_peUxJblxyM6a03AX1Ril0BefO4PhvkUSEvDb5fCclgrZNJDamKt/exec";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyjRYApiy3V_arjCerBEjzjSzTzLdKWRTKCDxaJ6H-cF24dpWhcNuYZfj2er9pNY-oz/exec"
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
@@ -238,7 +238,7 @@ export default function App() {
             variants={itemVariants}
             className="flex flex-wrap items-center justify-center gap-4"
           >
-            <button 
+            <button
               onClick={() => {
                 document.getElementById('participants')?.scrollIntoView({ behavior: 'smooth' });
               }}
@@ -247,7 +247,7 @@ export default function App() {
               See all participants
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </button>
-            <button 
+            <button
               onClick={() => {
                 document.getElementById('mission')?.scrollIntoView({ behavior: 'smooth' });
               }}
@@ -267,7 +267,7 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              whileHover={{ 
+              whileHover={{
                 y: -12,
                 transition: { type: "spring", stiffness: 300, damping: 20 }
               }}
@@ -316,7 +316,7 @@ export default function App() {
                     </p>
                   </div>
                 </div>
-                <button 
+                <button
                   onClick={() => {
                     setSelectedEvent("Bogota - 20th of April 2026");
                     setIsModalOpen(true);
@@ -333,11 +333,11 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              whileHover={{ 
+              whileHover={{
                 y: -12,
                 transition: { type: "spring", stiffness: 300, damping: 20 }
               }}
-              transition={{ duration: 0.5,}}
+              transition={{ duration: 0.5, }}
               className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg"
             >
               <div className="border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white p-6">
@@ -376,7 +376,7 @@ export default function App() {
                     </p>
                   </div>
                 </div>
-                <button 
+                <button
                   onClick={() => {
                     setSelectedEvent("Medellin - Date TBD");
                     setIsModalOpen(true);
@@ -415,7 +415,7 @@ export default function App() {
                 Detailed information on our Turkish project
                 participants that you will meet at the event
               </p>
-              <button 
+              <button
                 onClick={() => {
                   document.getElementById('participants')?.scrollIntoView({ behavior: 'smooth' });
                 }}
@@ -590,7 +590,7 @@ export default function App() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-                whileHover={{ 
+                whileHover={{
                   y: -12,
                   transition: { type: "spring", stiffness: 300, damping: 20 }
                 }}
@@ -640,7 +640,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <button 
+                  <button
                     onClick={() => {
                       setSelectedEvent(`Meeting with ${company.name}`);
                       setIsModalOpen(true);
